@@ -1,7 +1,13 @@
+import Navbar from "./components/Navbar";
+import Cards from "./components/Cards";
+import "./App.css";
+
 function App() {
   return (
-    <div>
-      <h1>Shadows & Silhouettes</h1>
+    <div className="App">
+      <Navbar />
+      <Cards />
+     
     </div>
   );
 }
