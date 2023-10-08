@@ -57,7 +57,7 @@ export default function Cards() {
         ]
       );
     }
-    console.log(theUsers);
+    console.log(theUsers.filter((user) => user.gender === "male"));
 
     userContent = (
       <ul>
