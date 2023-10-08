@@ -1,5 +1,7 @@
 ## Bienvenue sur mon projet de candidature pour Netatmo ! :office:
 
+![cover](https://github.com/clem0316/mon_Portfolio/blob/f860dc9d2bcf5ae388fd32d8ddef83e5b8fb4cf2/img/Screen1.jpg)
+
 ### :rocket: Le Projet
 Le but était de répondre à un cahier des charges :
 - faire une requête d'API pour recevoir 10 profils d'utilisateur
