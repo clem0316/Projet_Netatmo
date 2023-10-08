@@ -186,9 +186,7 @@ export default function Cards() {
       </div>
 
       <div className="flex justify-center">
-        <p className="text-sky-800 font-semibold">
-          Résultat de votre recherche :
-        </p>
+        <p className="text-sky-800 font-semibold">Your search results :</p>
       </div>
 
       {/* Order buttons */}

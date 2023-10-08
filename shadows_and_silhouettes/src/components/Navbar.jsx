@@ -13,13 +13,13 @@ export default function Navbar() {
         }  flex-col bg-sky-800 items-center justify-center w-full pb-5 px-3 sm:flex sm:relative sm:flex-row sm:p-0 `}
       >
         <li className="inline-block py-2 mx-4 text-lg sm:py-O">
-          <a href="#">Accueil</a>
+          <a href="#">Home</a>
         </li>
         <li className="inline-block py-2 mx-4 text-lg sm:py-O">
-          <a href="#">Mes favoris</a>
+          <a href="#">My favorites</a>
         </li>
         <li className="inline-block py-2 mx-4 text-lg sm:py-O">
-          <a href="#">Ma Blacklist</a>
+          <a href="#">My Blacklist</a>
         </li>
         <li className="inline-block py-2 mx-4 text-lg sm:py-O">
           <a href="#">Contact</a>
