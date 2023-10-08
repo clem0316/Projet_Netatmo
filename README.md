@@ -34,6 +34,8 @@ Le pannel principal est composé de nos boutons en 3 parties :
 - la 2ème ligne permet de trier dans l'ordre nos utilisateurs par âge. À noter que de base, après appel, ils sont déjà classés du plus jeune au plus vieux
 - la 3ème ligne comporte des boutons d'affichage. Ils permettent, parmi les utilisateur appelés, de ne garder que les hommes ou les femmes. À tout moment il est possible de revenir à l'affichage initial, sans tri.
 
+<br/>
+
 
 
 
