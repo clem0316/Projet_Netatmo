@@ -16,6 +16,7 @@ export default function Cards() {
       .then((res) => {
         if (!res.ok) throw new Error("The request is not correct");
         return res.json();
+        // checking error from API
       })
       .then((data) => {
         setMyAPI({ loading: false, error: false, data: data });
@@ -23,159 +24,201 @@ export default function Cards() {
       .catch((e) => {
         console.log(e);
         setMyAPI({ loading: false, error: true, data: undefined });
+        // checking general error
       });
   }, []);
+  // Because of the 2nd arguments, this useEffect will be executed only once.
 
-  // console.log(myAPI.data.results);
+  //
+
+  // ------- State for my results array ------ //
+  let [theUsers, setTheUsers] = useState([]);
+  console.log(theUsers);
 
   let content;
 
   if (myAPI.loading) {
     content = (
       <img src={loadIcon} alt="Page en chargement, veuillez patienter..." />
+      // Display icon during loading
     );
   } else if (myAPI.error) {
     content = <p className="text-red-600">Une erreur est survenue !</p>;
-  }
-  //  else if (myAPI.data?.length > 0) {
-  //   content = (
-  //     <ul>
-  //       {myAPI.data.map((item) => {
-  //         <li key={item.id}>
-  //           <span>essai</span>
-  //         </li>;
-  //       })}
-  //     </ul>
-  //   );
-  // }
-  else if (myAPI.data?.length === 0) {
+    // Display message in case of error
+  } else if (myAPI.data?.length === 0) {
     content = (
       <p className="text-red-600">No data corresponds to your request !</p>
+      // Display message in case of no result for this request
     );
   }
 
-  let theUsers = [];
+  // let theUsers = [];
   // let userContent;
 
   // const [checked, setChecked] = useState(false);
 
-  // ------ Call 1O Users ------ //
+  //
+
+  // ------ Call 1O Users (button) ------ //
 
   function tenUsers() {
     for (let i = 0; i < 10; i++) {
-      theUsers.push(myAPI.data.results[i]);
+      setTheUsers((theUsers) => [
+        ...theUsers,
+        myAPI.data.results[
+          Math.floor(Math.random() * myAPI.data.results.length)
+        ],
+      ]);
     }
-    console.log(theUsers);
   }
+
+  //
+
+  // ------ Call 10 Men Users (button) ------ //
 
   function tenMaleUsers() {
     let maleUsers = myAPI.data.results.filter((user) => user.gender === "male");
     for (let i = 0; i < 10; i++) {
-      theUsers.push(maleUsers[i]);
+      // theUsers.push(maleUsers[i]);
+      setTheUsers((theUsers) => [
+        ...theUsers,
+        maleUsers[[Math.floor(Math.random() * maleUsers.length)]],
+      ]);
     }
-
+    // After sorting myAPI results by gender, I add to my array a random user from the "male users array"
     console.log(theUsers);
   }
+
+  //
+
+  // ------ Call 10 Women Users (button) ------ //
 
   function tenFemaleUsers() {
     let femaleUsers = myAPI.data.results.filter(
       (user) => user.gender === "female"
     );
     for (let i = 0; i < 10; i++) {
-      theUsers.push(femaleUsers[i]);
+      // theUsers.push(femaleUsers[i]);
+      setTheUsers((theUsers) => [
+        ...theUsers,
+        femaleUsers[[Math.floor(Math.random() * femaleUsers.length)]],
+      ]);
     }
-    console.log(theUsers);
   }
 
-  //   userContent = (
-  //     <ul>
-  //       {theUsers.map((item) => (
-  //         <li key={item.id}>
-  //           <span className="userName">
-  //             {item.name.first} {item.name.last}
-  //           </span>
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   );
+  //
 
-  //   return userContent;
-  // }
+  // ------ Clearing Cards (array & Display) ------ //
 
   function clear() {
-    theUsers = [];
+    theUsers = setTheUsers(() => []);
     console.log(theUsers);
   }
 
-  function dateOrderFromYoung() {
-    theUsers.sort((a, b) => (a.dob.date < b.dob.date ? 1 : -1));
-    console.log(theUsers);
-  }
+  // useState for ordering by age
+  const [ageOrder, setOrderAge] = useState(true);
 
-  function dateOrderFromOld() {
-    theUsers.sort((a, b) => (a.dob.date > b.dob.date ? 1 : -1));
-    console.log(theUsers);
-  }
+  // useState for sorting by gender
+  const [gender, setGender] = useState("");
 
-  // function displayUsers() {
-  //   for (let i = 0; i < theUsers.length; i++)
-  //     return `
-  // <div>
-  // <p>bonjour</p>
-  // </div>`;
-  // }
+  function deleteItem(id) {
+    setTheUsers(theUsers.filter((user) => user.id !== id));
+  }
 
   return (
-    <div>
+    <div className="cardsContent">
       {content}
-      <div className="allButtons flex py-4 justify-evenly">
-        <button onClick={tenUsers} className="bg-green-600 mx-5">
-          +10
-        </button>
-        <button onClick={tenMaleUsers} className="bg-orange-600">
-          +10 men
-        </button>
-        <button onClick={tenFemaleUsers} className="bg-amber-600">
-          +10 women
-        </button>
-        <button onClick={clear} className="bg-teal-200">
-          Clear
-        </button>
+
+      <div className="pannel">
+        {/* Call buttons (10users-10men-10women) */}
+        <div className="callButtons flex justify-evenly pt-3">
+          <button onClick={tenUsers} className="bg-green-600 px-3">
+            +10 users
+          </button>
+          <button onClick={tenMaleUsers} className="bg-orange-600 px-3">
+            +10 men
+          </button>
+          <button onClick={tenFemaleUsers} className="bg-amber-600 px-3">
+            +10 women
+          </button>
+          <button onClick={clear} className="bg-teal-200 px-3">
+            Clear
+          </button>
+        </div>
+
+        {/* Order buttons */}
+        <div className="orderButtons my-4 text-sm flex justify-evenly border-sky-800">
+          <button
+            onClick={() => setOrderAge(true)}
+            className="text-slate-50 bg-sky-800 px-3"
+          >
+            Sort from younger
+          </button>
+          <button
+            onClick={() => setOrderAge(false)}
+            className="text-slate-50 bg-sky-800 px-3"
+          >
+            Sort from older
+          </button>
+        </div>
+
+        {/* Sort buttons */}
+        <div className="sortDisplay flex justify-evenly my-5">
+          <button
+            onClick={() => setGender("male")}
+            className="px-3 border-stone-500"
+          >
+            Display : men
+          </button>
+          <button
+            onClick={() => setGender("female")}
+            className="px-3 border-stone-500"
+          >
+            Display : women
+          </button>
+          <button
+            onClick={() => setGender("")}
+            className="px-3 border-stone-500"
+          >
+            Display : everybody
+          </button>
+        </div>
       </div>
-      <div className="orderButtons my-4 text-sm flex justify-evenly">
-        <button
-          onClick={dateOrderFromYoung}
-          className="text-slate-50 bg-stone-800"
-        >
-          Order from younger
-        </button>
-        <button
-          onClick={dateOrderFromOld}
-          className="text-slate-50 bg-stone-800"
-        >
-          Order from older
-        </button>
+
+      <div className="flex justify-center">
+        <p className="text-sky-800 font-semibold">
+          Résultat de votre recherche :
+        </p>
       </div>
-      <ul>
-        {theUsers.map((item) => (
-          <DisplayUsers
-            key={item.id.value}
-            email={item.email}
-            gender={item.gender}
-            name={item.name}
-            picture={item.picture.large}
-          />
-        ))}
+
+      {/* Order buttons */}
+      <ul className="my-6">
+        {theUsers
+          .sort((a, b) => {
+            if (ageOrder) {
+              return a.dob.date < b.dob.date ? 1 : -1;
+            } else {
+              return a.dob.date > b.dob.date ? 1 : -1;
+            }
+            // Order from younger to older & contrary
+          })
+          .filter((user) => {
+            return gender === "" ? user : user.gender === gender;
+          })
+          .map((item, index) => (
+            <DisplayUsers
+              key={index}
+              email={item.email}
+              gender={item.gender}
+              name={item.name}
+              picture={item.picture.large}
+              age={item.dob.age}
+              id={item.id}
+              deleteItem={deleteItem}
+            />
+            // Props for DisplayUsers component which will create each card
+          ))}
       </ul>
-      {/* <label htmlFor="test">
-        bonjour
-        <input
-          type="checkbox"
-          id="test"
-          checked={checked}
-          onChange={handleChange}
-        />
-      </label> */}
     </div>
   );
 }
