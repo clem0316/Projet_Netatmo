@@ -21,7 +21,7 @@ J'ai choisi d'utiliser REACT, JAVASCRIPT, TAILWIND et CSS
 
 <br/>
 
-## En détail :pencil:
+## :pencil: En détail 
 
 <br/>
 
@@ -47,7 +47,7 @@ Comme demandé, un bouton par Card permet la suppression de cette dernière.
 
 <br/>
 
-## Points à améliorer et objectifs à court terme :bookmark:
+## :bookmark: Points à améliorer et objectifs à court terme 
 
 <br>
 
