@@ -1,6 +1,6 @@
 ## Bienvenue sur mon projet de candidature pour Netatmo ! :office:
 
-![cover](https://github.com/clem0316/mon_Portfolio/blob/f860dc9d2bcf5ae388fd32d8ddef83e5b8fb4cf2/img/Screen1.jpg)
+![cover](https://github.com/clem0316/Projet_Netatmo/blob/f5fb0b971cd948f175ffb6fe4645f587ea47ca2e/img/image3.jpg)
 
 ### :rocket: Le Projet
 Le but était de répondre à un cahier des charges :
