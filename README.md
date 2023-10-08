@@ -18,39 +18,3 @@ Le but était de répondre à un cahier des charges :
 J'ai choisi d'utiliser REACT, JAVASCRIPT, TAILWIND et CSS
 
 
-Objectif à court terme : refaire ce projet en utilisant React et Taiwind.
-
-![cover](https://github.com/clem0316/mon_Portfolio/blob/f860dc9d2bcf5ae388fd32d8ddef83e5b8fb4cf2/img/Screen1.jpg)
-
-<br/>
-
-Le 1er menu de navigation permet un accès rapide sur la page principale. La 2nde ligne de navigaiton permet de basculer sur de nouvelles listes de vidéos par type : Longs métrages, documentaire, séries, animation...
-
-<br/>
-
-![cover](https://github.com/clem0316/mon_Portfolio/blob/f860dc9d2bcf5ae388fd32d8ddef83e5b8fb4cf2/img/Screen2.jpg)
-
-<br/>
-
-Un click sur les images permet de lancer le trailer du film concerné.
-
-<br/>
-
-![cover](https://github.com/clem0316/mon_Portfolio/blob/f860dc9d2bcf5ae388fd32d8ddef83e5b8fb4cf2/img/Screen3.jpg)
-
-<br/>
-
-
-:bookmark: Quelques notes : 
-- Le site est responsive et adapté aux formats tablettes et téléphones
-- Il est possible d'activer le son de la vidéo d'intro du Header
-- N'hésitez pas à me faire part de toute remarque me permettant d'améliorer mon code
-- Le site est déployé par Vercel, les vidéos hébergées par Cloudinary.
-  (:warning: Il arrive que ce dernier hébergeur ne permette pas l'accès aux vidéos pendant de courts moments). À noter que les problèmes aléatoires d'affichage ne sont pas rencontrés sur les supports mobiles.
-
-  Le résultat est visible ici : https://website-sound-designer.vercel.app/
-
-<br/>
-<br/>
-
-![cover](https://github.com/clem0316/mon_Portfolio/blob/70216725dc99470738a44b8e7840c715fc31d305/img/Screen4.jpg)
