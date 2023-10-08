@@ -21,7 +21,7 @@ J'ai choisi d'utiliser REACT, JAVASCRIPT, TAILWIND et CSS
 
 <br/>
 
-## En détail
+## En détail :pencil:
 
 <br/>
 
@@ -46,3 +46,13 @@ Comme demandé, un bouton par Card permet la suppression de cette dernière.
 ![Cover](https://github.com/clem0316/Projet_Netatmo/blob/5dc1a9e310e94035c4098f1eda3250ec0732b3b3/img/image2.png)
 
 <br/>
+
+## Points à améliorer et objectifs à court terme :bookmark:
+
+<br>
+
+1 - J'aurais souhaité pouvoir ajouter une liste de favoris ainsi qu'une liste de blacklisté. Le principe n'aurait pas été compliqué : un bouton sur une card qui enverrai l'id de cet utilisateur dans un nouveau tableau, dont l'affichage se ferait sur l'onglet "My favorites". Même principe pour la blacklist qui irait sur l'onglet "My Blacklist".
+2 - En plus de ces ajouts en favoris ou blacklit, ces profils seraient retirés de nos résultats issus du principal tableau. Ainsi, les recherches ne proposeraient plus ces mêmes profils, considérés comme ayant été statués par l'utilisateur de l'app.
+3 - Je ne suis pas satisfait de la découpe de mes composants en React : le composant "Cards" est trop grand et aurait pu être allégé.
+
+  
