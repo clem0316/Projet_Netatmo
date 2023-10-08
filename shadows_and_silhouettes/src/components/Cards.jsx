@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import loadIcon from "../assets/loadIcon.svg";
+import DisplayUsers from "./DisplayUsers";
 
 export default function Cards() {
   const [myAPI, setMyAPI] = useState({
@@ -21,7 +22,7 @@ export default function Cards() {
       })
       .catch((e) => {
         console.log(e);
-        setAPIState({ loading: false, error: true, data: undefined });
+        setMyAPI({ loading: false, error: true, data: undefined });
       });
   }, []);
 
@@ -62,25 +63,18 @@ export default function Cards() {
 
   function tenUsers() {
     for (let i = 0; i < 10; i++) {
-      theUsers.push(
-        myAPI.data.results[
-          Math.floor(Math.random() * myAPI.data.results.length)
-        ]
-      );
+      theUsers.push(myAPI.data.results[i]);
     }
-
     console.log(theUsers);
-    return theUsers;
   }
 
   function tenMaleUsers() {
     let maleUsers = myAPI.data.results.filter((user) => user.gender === "male");
     for (let i = 0; i < 10; i++) {
-      theUsers.push(maleUsers[Math.floor(Math.random() * maleUsers.length)]);
+      theUsers.push(maleUsers[i]);
     }
 
     console.log(theUsers);
-    return theUsers;
   }
 
   function tenFemaleUsers() {
@@ -88,13 +82,9 @@ export default function Cards() {
       (user) => user.gender === "female"
     );
     for (let i = 0; i < 10; i++) {
-      theUsers.push(
-        femaleUsers[Math.floor(Math.random() * femaleUsers.length)]
-      );
+      theUsers.push(femaleUsers[i]);
     }
-
     console.log(theUsers);
-    return theUsers;
   }
 
   //   userContent = (
@@ -120,14 +110,20 @@ export default function Cards() {
   function dateOrderFromYoung() {
     theUsers.sort((a, b) => (a.dob.date < b.dob.date ? 1 : -1));
     console.log(theUsers);
-    return theUsers;
   }
 
   function dateOrderFromOld() {
     theUsers.sort((a, b) => (a.dob.date > b.dob.date ? 1 : -1));
     console.log(theUsers);
-    return theUsers;
   }
+
+  // function displayUsers() {
+  //   for (let i = 0; i < theUsers.length; i++)
+  //     return `
+  // <div>
+  // <p>bonjour</p>
+  // </div>`;
+  // }
 
   return (
     <div>
@@ -146,7 +142,6 @@ export default function Cards() {
           Clear
         </button>
       </div>
-      <h1>Résultat de votre recherche : </h1>
       <div className="orderButtons my-4 text-sm flex justify-evenly">
         <button
           onClick={dateOrderFromYoung}
@@ -161,6 +156,17 @@ export default function Cards() {
           Order from older
         </button>
       </div>
+      <ul>
+        {theUsers.map((item) => (
+          <DisplayUsers
+            key={item.id.value}
+            email={item.email}
+            gender={item.gender}
+            name={item.name}
+            picture={item.picture.large}
+          />
+        ))}
+      </ul>
       {/* <label htmlFor="test">
         bonjour
         <input
