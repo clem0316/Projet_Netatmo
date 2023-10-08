@@ -4,7 +4,9 @@
 Le but était de répondre à un cahier des charges :
 - faire une requête d'API pour recevoir 10 profils d'utilisateur
 - générer une Card pour chaque profil
-- 
+- pouvoir ordonner par date de naissance nos utilisateurs
+- pouvoir trier par genre
+- supprimer une Card spécifique 
 
 <br/>
 
