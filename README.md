@@ -25,17 +25,24 @@ J'ai choisi d'utiliser REACT, JAVASCRIPT, TAILWIND et CSS
 
 <br/>
 
-![cover](https://github.com/clem0316/Projet_Netatmo/blob/d235ad1e3d0acffe0cc22f63350a7d29b4496b99/img/image1.png)
-
-<br/>
-
-Le pannel principal est composé de nos boutons en 3 parties : 
+# Le pannel principal est composé de nos boutons en 3 parties : 
 - la 1ère ligne concerne l'appel de notre API. J'ai choisi de laisser choisir l'utilisateur entre appeler 10 utilisateurs sans précision de genre, 10 hommes hommes ou 10 femmes. Un bouton "clear" permet de vider notre appel. 
 - la 2ème ligne permet de trier dans l'ordre nos utilisateurs par âge. À noter que de base, après appel, ils sont déjà classés du plus jeune au plus vieux
 - la 3ème ligne comporte des boutons d'affichage. Ils permettent, parmi les utilisateur appelés, de ne garder que les hommes ou les femmes. À tout moment il est possible de revenir à l'affichage initial, sans tri.
 
 <br/>
 
+![cover](https://github.com/clem0316/Projet_Netatmo/blob/d235ad1e3d0acffe0cc22f63350a7d29b4496b99/img/image1.png)
+
+<br/>
 
 
+# Le conteneur d'affichage des Cards.
 
+Comme demandé, un bouton par Card permet la suppression de cette dernière. 
+
+<br/>
+
+![Cover](https://github.com/clem0316/Projet_Netatmo/blob/5dc1a9e310e94035c4098f1eda3250ec0732b3b3/img/image2.png)
+
+<br/>
