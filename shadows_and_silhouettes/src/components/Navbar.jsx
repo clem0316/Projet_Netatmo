@@ -16,13 +16,19 @@ export default function Navbar() {
           <a href="#">Home</a>
         </li>
         <li className="inline-block py-2 mx-4 text-lg sm:py-O">
-          <a href="#">My favorites</a>
+          <a className="opacity-20" href="#">
+            My favorites
+          </a>
         </li>
         <li className="inline-block py-2 mx-4 text-lg sm:py-O">
-          <a href="#">My Blacklist</a>
+          <a className="opacity-20" href="#">
+            My Blacklist
+          </a>
         </li>
         <li className="inline-block py-2 mx-4 text-lg sm:py-O">
-          <a href="#">Contact</a>
+          <a className="opacity-20" href="#">
+            Contact
+          </a>
         </li>
       </ul>
       <button
