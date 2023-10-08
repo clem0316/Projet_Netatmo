@@ -8,6 +8,7 @@ export default function Cards() {
     data: undefined,
   });
 
+  // -------- Fetch API -------- //
   useEffect(() => {
     setMyAPI({ ...myAPI, loading: true });
     fetch("https://randomuser.me/api/?results=1000")
@@ -17,6 +18,10 @@ export default function Cards() {
       })
       .then((data) => {
         setMyAPI({ loading: false, error: false, data: data });
+      })
+      .catch((e) => {
+        console.log(e);
+        setAPIState({ loading: false, error: true, data: undefined });
       });
   }, []);
 
@@ -30,24 +35,30 @@ export default function Cards() {
     );
   } else if (myAPI.error) {
     content = <p className="text-red-600">Une erreur est survenue !</p>;
-  } else if (myAPI.data?.length > 0) {
-    content = (
-      <ul>
-        {myAPI.data.map((item) => {
-          <li key={item.id}>
-            <span>essai</span>
-          </li>;
-        })}
-      </ul>
-    );
-  } else if (myAPI.data?.length === 0) {
+  }
+  //  else if (myAPI.data?.length > 0) {
+  //   content = (
+  //     <ul>
+  //       {myAPI.data.map((item) => {
+  //         <li key={item.id}>
+  //           <span>essai</span>
+  //         </li>;
+  //       })}
+  //     </ul>
+  //   );
+  // }
+  else if (myAPI.data?.length === 0) {
     content = (
       <p className="text-red-600">No data corresponds to your request !</p>
     );
   }
 
   let theUsers = [];
-  let userContent;
+  // let userContent;
+
+  // const [checked, setChecked] = useState(false);
+
+  // ------ Call 1O Users ------ //
 
   function tenUsers() {
     for (let i = 0; i < 10; i++) {
@@ -57,34 +68,108 @@ export default function Cards() {
         ]
       );
     }
-    console.log(theUsers.filter((user) => user.gender === "male"));
 
-    userContent = (
-      <ul>
-        {theUsers.map((item) => (
-          <li key={item.id}>
-            <span className="userName">
-              {item.name.first} {item.name.last}
-            </span>
-          </li>
-        ))}
-      </ul>
-    );
-
-    return userContent;
+    console.log(theUsers);
+    return theUsers;
   }
+
+  function tenMaleUsers() {
+    let maleUsers = myAPI.data.results.filter((user) => user.gender === "male");
+    for (let i = 0; i < 10; i++) {
+      theUsers.push(maleUsers[Math.floor(Math.random() * maleUsers.length)]);
+    }
+
+    console.log(theUsers);
+    return theUsers;
+  }
+
+  function tenFemaleUsers() {
+    let femaleUsers = myAPI.data.results.filter(
+      (user) => user.gender === "female"
+    );
+    for (let i = 0; i < 10; i++) {
+      theUsers.push(
+        femaleUsers[Math.floor(Math.random() * femaleUsers.length)]
+      );
+    }
+
+    console.log(theUsers);
+    return theUsers;
+  }
+
+  //   userContent = (
+  //     <ul>
+  //       {theUsers.map((item) => (
+  //         <li key={item.id}>
+  //           <span className="userName">
+  //             {item.name.first} {item.name.last}
+  //           </span>
+  //         </li>
+  //       ))}
+  //     </ul>
+  //   );
+
+  //   return userContent;
+  // }
 
   function clear() {
     theUsers = [];
     console.log(theUsers);
   }
 
+  function dateOrderFromYoung() {
+    theUsers.sort((a, b) => (a.dob.date < b.dob.date ? 1 : -1));
+    console.log(theUsers);
+    return theUsers;
+  }
+
+  function dateOrderFromOld() {
+    theUsers.sort((a, b) => (a.dob.date > b.dob.date ? 1 : -1));
+    console.log(theUsers);
+    return theUsers;
+  }
+
   return (
     <div>
-      <h1>Résultat de votre recherche : </h1>
       {content}
-      <button onClick={tenUsers}>+10</button>
-      <button onClick={clear}>Clear</button>
+      <div className="allButtons flex py-4 justify-evenly">
+        <button onClick={tenUsers} className="bg-green-600 mx-5">
+          +10
+        </button>
+        <button onClick={tenMaleUsers} className="bg-orange-600">
+          +10 men
+        </button>
+        <button onClick={tenFemaleUsers} className="bg-amber-600">
+          +10 women
+        </button>
+        <button onClick={clear} className="bg-teal-200">
+          Clear
+        </button>
+      </div>
+      <h1>Résultat de votre recherche : </h1>
+      <div className="orderButtons my-4 text-sm flex justify-evenly">
+        <button
+          onClick={dateOrderFromYoung}
+          className="text-slate-50 bg-stone-800"
+        >
+          Order from younger
+        </button>
+        <button
+          onClick={dateOrderFromOld}
+          className="text-slate-50 bg-stone-800"
+        >
+          Order from older
+        </button>
+      </div>
+      {/* <label htmlFor="test">
+        bonjour
+        <input
+          type="checkbox"
+          id="test"
+          checked={checked}
+          onChange={handleChange}
+        />
+      </label> */}
     </div>
   );
 }
