@@ -51,8 +51,8 @@ Comme demandé, un bouton par Card permet la suppression de cette dernière.
 
 <br>
 
-1 - J'aurais souhaité pouvoir ajouter une liste de favoris ainsi qu'une liste de blacklisté. Le principe n'aurait pas été compliqué : un bouton sur une card qui enverrai l'id de cet utilisateur dans un nouveau tableau, dont l'affichage se ferait sur l'onglet "My favorites". Même principe pour la blacklist qui irait sur l'onglet "My Blacklist".
-2 - En plus de ces ajouts en favoris ou blacklit, ces profils seraient retirés de nos résultats issus du principal tableau. Ainsi, les recherches ne proposeraient plus ces mêmes profils, considérés comme ayant été statués par l'utilisateur de l'app.
-3 - Je ne suis pas satisfait de la découpe de mes composants en React : le composant "Cards" est trop grand et aurait pu être allégé.
+- J'aurais souhaité pouvoir ajouter une liste de favoris ainsi qu'une liste de blacklisté. Le principe n'aurait pas été compliqué : un bouton sur une card qui enverrai l'id de cet utilisateur dans un nouveau tableau, dont l'affichage se ferait sur l'onglet "My favorites". Même principe pour la blacklist qui irait sur l'onglet "My Blacklist".
+- En plus de ces ajouts en favoris ou blacklit, ces profils seraient retirés de nos résultats issus du principal tableau. Ainsi, les recherches ne proposeraient plus ces mêmes profils, considérés comme ayant été statués par l'utilisateur de l'app.
+- Je ne suis pas satisfait de la découpe de mes composants en React : le composant "Cards" est trop grand et aurait pu être allégé.
 
   
