@@ -2,6 +2,11 @@
 
 ![cover](https://github.com/clem0316/Projet_Netatmo/blob/f5fb0b971cd948f175ffb6fe4645f587ea47ca2e/img/image3.jpg)
 
+<br/>
+
+### Initialisation
+Pour lancer le projet, dnas le terminal intégré, pointez le dossier "shadows_and_silhouettes puis `npm run dev`"
+
 ### :rocket: Le Projet
 Le but était de répondre à un cahier des charges :
 - faire une requête d'API pour recevoir 10 profils d'utilisateur
