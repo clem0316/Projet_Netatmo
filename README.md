@@ -7,7 +7,7 @@
 ### :floppy_disk: Initialisation
 Pour lancer le projet, dans le terminal intégré : 
 - pointez le dossier "shadows_and_silhouettes"
-- npm i pour installer le package
+- `npm i` pour installer le package
 - `npm run dev` pour lancer
 
 
