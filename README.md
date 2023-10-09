@@ -37,7 +37,7 @@ J'ai choisi d'utiliser REACT, JAVASCRIPT, TAILWIND et CSS
 ### Le pannel principal est composé de nos boutons, divisés en 3 parties : 
 - la 1ère ligne concerne l'appel de notre API. J'ai choisi de laisser choisir l'utilisateur entre appeler 10 utilisateurs sans précision de genre, 10 hommes ou 10 femmes. Un bouton "clear" permet de vider notre appel. 
 - la 2ème ligne permet de trier dans l'ordre nos utilisateurs par âge. À noter que de base, après appel, ils sont déjà classés du plus jeune au plus vieux
-- la 3ème ligne comporte des boutons d'affichage. Ils permettent, parmi les utilisateur appelés, de ne garder que les hommes ou les femmes. À tout moment il est possible de revenir à l'affichage initial, sans tri.
+- la 3ème ligne comporte des boutons d'affichage. Ils permettent, parmi les utilisateurs appelés, de ne garder que les hommes ou les femmes. À tout moment il est possible de revenir à l'affichage initial, sans tri.
 
 <br/>
 
@@ -60,8 +60,8 @@ Comme demandé, un bouton par Card permet la suppression de cette dernière.
 
 <br>
 
-- J'aurais souhaité pouvoir ajouter une liste de favoris ainsi qu'une liste de blacklisté. Le principe n'aurait pas été compliqué : un bouton sur une card qui enverrai l'id de cet utilisateur dans un nouveau tableau, dont l'affichage se ferait sur l'onglet "My favorites". Même principe pour la blacklist qui irait sur l'onglet "My Blacklist".
-- En plus de ces ajouts en favoris ou blacklit, ces profils seraient retirés de nos résultats issus du principal tableau. Ainsi, les recherches ne proposeraient plus ces mêmes profils, considérés comme ayant été statués par l'utilisateur de l'app.
+- J'aurais souhaité pouvoir ajouter une liste de favoris ainsi qu'une liste de blacklistés. Le principe n'aurait pas été compliqué : un bouton sur une card qui enverrait l'id de cet utilisateur dans un nouveau tableau, dont l'affichage se ferait sur l'onglet "My favorites". Même principe pour la blacklist qui irait sur l'onglet "My Blacklist".
+- En plus de ces ajouts en favoris ou blacklist, ces profils seraient retirés de nos résultats issus du principal tableau. Ainsi, les recherches ne proposeraient plus ces mêmes profils, considérés comme ayant été statués par l'utilisateur de l'app.
 - Je ne suis pas satisfait de la découpe de mes composants en React : le composant "Cards" est trop grand et aurait pu être allégé.
 - Pour le moment les onglets de la Navbar (sauf "Home") ne sont pas encore disponibles. J'ai beaucoup baissé leur opacité pour avertir de leur inutilité actuelle.
 
