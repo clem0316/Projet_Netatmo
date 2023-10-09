@@ -11,7 +11,7 @@ Pour lancer le projet, dnas le terminal intégré, pointez le dossier "shadows_a
 <br/>
 
 
-### :rocket: Le Projet
+## :rocket: Le Projet
 Le but était de répondre à un cahier des charges :
 - faire une requête d'API pour recevoir 10 profils d'utilisateur
 - générer une Card pour chaque profil
