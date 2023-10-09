@@ -4,8 +4,10 @@
 
 <br/>
 
-### Initialisation
+### :floppy_disk: Initialisation
 Pour lancer le projet, dnas le terminal intégré, pointez le dossier "shadows_and_silhouettes puis `npm run dev`"
+
+<br/>
 
 ### :rocket: Le Projet
 Le but était de répondre à un cahier des charges :
@@ -17,7 +19,7 @@ Le but était de répondre à un cahier des charges :
 
 <br/>
 
-### :floppy_disk: Technos
+### :minidisc:: Technos
 <p align="left"> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="JavaScript" /></a><a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" /></a> <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="36" height="36" alt="TailwindCSS" /></a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a> </p>
 
 <br/>
