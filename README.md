@@ -9,7 +9,7 @@ Pour lancer le projet, dans le terminal intégré :
 - pointez le dossier "shadows_and_silhouettes"
 - `npm i` pour installer le package
 - `npm run dev` pour lancer
-- vous n'avez plus qu'à cliquer sur votre lien http://localhost:xxxx/
+- vous n'avez plus qu'à cliquer sur le lien apparu dans votre treminal (ex : http://localhost:xxxx/)
 
 
 <br/>
