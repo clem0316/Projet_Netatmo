@@ -68,5 +68,6 @@ Comme demandé, un bouton par Card permet la suppression de cette dernière.
 - En plus de ces ajouts en favoris ou blacklist, ces profils seraient retirés de nos résultats issus du principal tableau. Ainsi, les recherches ne proposeraient plus ces mêmes profils, considérés comme ayant été statués par l'utilisateur de l'app.
 - Je ne suis pas satisfait de la découpe de mes composants en React : le composant "Cards" est trop grand et aurait pu être allégé.
 - Pour le moment les onglets de la Navbar (sauf "Home") ne sont pas encore disponibles. J'ai beaucoup baissé leur opacité pour avertir de leur inutilité actuelle.
+- Le reste des informations des profils pourrait être affiché (via :hover) en passant la souris sur une Card
 
   
