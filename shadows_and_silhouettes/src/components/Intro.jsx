@@ -13,7 +13,7 @@ export default function Intro() {
         random crowd that makes our world!
       </p>
       <p className="introText text-lg">
-        To search, start by clicking on a button below: : 10 users, 10 men or 10
+        To search, start by clicking on a button below : 10 users, 10 men or 10
         women
       </p>
     </div>
