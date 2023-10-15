@@ -34,7 +34,7 @@ J'ai choisi d'utiliser REACT, JAVASCRIPT, TAILWIND et CSS
 
 <br/>
 
-## Déploiement
+## :arrows_counterclockwise: Déploiement
 
 <br>
 
