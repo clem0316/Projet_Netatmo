@@ -12,6 +12,7 @@ export default function Cards() {
   // -------- Fetch API -------- //
   useEffect(() => {
     setMyAPI({ ...myAPI, loading: true });
+    // Ici, ...myAPI nous permet de dire que les propriétés de myAPI ne changent pas, sauf celles citées (loading:true). On aurait pu écrire setMyAPI({error:false, error:fale, loading:true}) mais pour gagner du temps, on n'a écrit que les propriétés qui changent d'état. ...MyAPI représente donc toutes les autres propriétés inchangées.
     fetch("https://randomuser.me/api/?results=1000")
       .then((res) => {
         if (!res.ok) throw new Error("The request is not correct");
@@ -51,11 +52,6 @@ export default function Cards() {
       // Display message in case of no result for this request
     );
   }
-
-  // let theUsers = [];
-  // let userContent;
-
-  // const [checked, setChecked] = useState(false);
 
   //
 
