@@ -39,7 +39,7 @@ J'ai choisi d'utiliser REACT, JAVASCRIPT, TAILWIND et CSS
 <br/>
 
 ### Le pannel principal est composé de nos boutons, regroupés en 3 parties : 
-- la 1ère ligne concerne l'appel de notre API. J'ai choisi de laisser choisir l'utilisateur entre appeler 10 utilisateurs sans précision de genre, 10 hommes ou 10 femmes. Un bouton "clear" permet de vider notre appel. 
+- la 1ère ligne concerne l'appel de notre API. L'utilisateur peut choisir d'appeler 10 profils sans précision de genre, sinon 10 hommes ou 10 femmes. Un bouton "clear" permet de vider notre recherche. 
 - la 2ème ligne permet de trier dans l'ordre nos utilisateurs par âge. À noter que de base, après appel, ils sont déjà classés du plus jeune au plus vieux
 - la 3ème ligne comporte des boutons d'affichage. Ils permettent, parmi les utilisateurs appelés, de ne garder que les hommes ou les femmes. À tout moment il est possible de revenir à l'affichage initial, sans tri.
 
