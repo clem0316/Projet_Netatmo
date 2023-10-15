@@ -34,6 +34,16 @@ J'ai choisi d'utiliser REACT, JAVASCRIPT, TAILWIND et CSS
 
 <br/>
 
+## Déploiement
+
+<br>
+
+Vous pourrez trouver le projet ici : 
+
+https://projetnetatmo-git-main-clem0316.vercel.app
+
+<br>
+
 ## :pencil: En détail 
 
 <br/>
